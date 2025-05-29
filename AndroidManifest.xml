@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.germainz.hodor"
+    package="com.germainz.marpo"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -9,7 +9,7 @@
 
     <application
         android:icon="@drawable/ic_launcher"
-        android:label="@string/hodor">
+        android:label="@string/marpo">
 
         <meta-data
             android:name="xposedmodule"
@@ -19,7 +19,7 @@
             android:value="2.0*" />
         <meta-data
             android:name="xposeddescription"
-            android:value="@string/hodor" />
+            android:value="@string/marpo" />
 
     </application>
 
