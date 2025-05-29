@@ -1,4 +1,4 @@
-package com.germainz.hodor;
+package com.germainz.marpo;
 
 import android.graphics.Paint;
 import android.widget.TextView;
@@ -8,35 +8,35 @@ import static de.robv.android.xposed.XposedHelpers.findAndHookMethod;
 import de.robv.android.xposed.IXposedHookZygoteInit;
 import de.robv.android.xposed.XC_MethodHook;
 
-public class Hodor implements IXposedHookZygoteInit {
+public class Marpo implements IXposedHookZygoteInit {
 
-    // Hodor
-    private static final String HODOR = "Hodor";
-    private static final String HODOR_HODOR = "\\w+";
-    private static final String HODOR_HODOR_HODOR = "setText";
-    private static final String HODOR_HODOR_HODOR_HODOR = "android.view.GLES20Canvas";
-    private static final String HODOR_HODOR_HODOR_HODOR_HODOR = "drawText";
-    private static final String HODOR_HODOR_HODOR_HOOODOOOOOR = "setHint";
-    private static final int HOOODOOOR = 0;
+    // Marpo
+    private static final String MARPO = "Marpo";
+    private static final String MARPO_MARPO = "\\w+";
+    private static final String MARPO_MARPO_MARPO = "setText";
+    private static final String MARPO_MARPO_MARPO_MARPO = "android.view.GLES20Canvas";
+    private static final String MARPO_MARPO_MARPO_MARPO_MARPO = "drawText";
+    private static final String MARPO_MARPO_MARPO_MAAARPOOOOO = "setHint";
+    private static final int MAAARPOOO = 0;
 
     @Override
-    public void initZygote(StartupParam hodorHodorHodorHodor) throws Throwable {
-        XC_MethodHook hodorHodor = new XC_MethodHook() {
+    public void initZygote(StartupParam marpoMarpoMarpoMarpo) throws Throwable {
+        XC_MethodHook marpoMarpo = new XC_MethodHook() {
             @Override
-            protected void beforeHookedMethod(MethodHookParam hodorHodorHODOR) throws Throwable {
-                CharSequence hodorHodorHodor = (CharSequence) hodorHodorHODOR.args[HOOODOOOR];
-                if (hodorHodorHodor != null) {
-                    String hodor = hodorHodorHodor.toString().replaceAll(HODOR_HODOR, HODOR);
-                    hodorHodorHODOR.args[HOOODOOOR] = hodor;
+            protected void beforeHookedMethod(MethodHookParam marpoMarpoMARPO) throws Throwable {
+                CharSequence marpoMarpoMarpo = (CharSequence) marpoMarpoMARPO.args[MAAARPOOO];
+                if (marpoMarpoMarpo != null) {
+                    String marpo = marpoMarpoMarpo.toString().replaceAll(MARPO_MARPO, MARPO);
+                    marpoMarpoMARPO.args[MAAARPOOO] = marpo;
                 }
             }
         };
 
-        findAndHookMethod(TextView.class, HODOR_HODOR_HODOR, CharSequence.class, TextView.BufferType.class,
-                boolean.class, int.class, hodorHodor);
-        findAndHookMethod(TextView.class, HODOR_HODOR_HODOR_HOOODOOOOOR , CharSequence.class, hodorHodor);
-        findAndHookMethod(HODOR_HODOR_HODOR_HODOR, null, HODOR_HODOR_HODOR_HODOR_HODOR, String.class, float.class,
-                float.class, Paint.class, hodorHodor);
+        findAndHookMethod(TextView.class, MARPO_MARPO_MARPO, CharSequence.class, TextView.BufferType.class,
+                boolean.class, int.class, marpoMarpo);
+        findAndHookMethod(TextView.class, MARPO_MARPO_MARPO_MAAARPOOOOO , CharSequence.class, marpoMarpo);
+        findAndHookMethod(MARPO_MARPO_MARPO_MARPO, null, MARPO_MARPO_MARPO_MARPO_MARPO, String.class, float.class,
+                float.class, Paint.class, marpoMarpo);
     }
 
 }
